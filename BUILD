@@ -56,6 +56,7 @@ if ($UNAME == "ULTRIX")		setenv WWW_MACH	decstation
 if ($UNAME == "AIX")    	setenv WWW_MACH	rs6000
 if ($UNAME == "OSF1")   	setenv WWW_MACH	osf1
 if ($UNAME == "BSD/386")	setenv WWW_MACH	unix
+if ($UNAME == "FreeBSD")	setenv WWW_MACH	freebsd
 if ($UNAME == "Linux")		setenv WWW_MACH	linux
 if ($UNAME == "A/UX")		setenv WWW_MACH	aux
 if ($UNAME == "SMP_DC.SOx")	setenv WWW_MACH	pyramid

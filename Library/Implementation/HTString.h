@@ -29,10 +29,13 @@ Case-insensitive string inside another string
    This works like strstr() but is not case-sensitive.
    
  */
-
+#ifndef __FreeBSD__
 PUBLIC char * strcasestr PARAMS((char * s1,
                                  char * s2));
-
+#else
+PUBLIC char * strcasestr PARAMS((const char * s1,
+                                 const char * s2));
+#endif
 /*
 
 Malloced string manipulation

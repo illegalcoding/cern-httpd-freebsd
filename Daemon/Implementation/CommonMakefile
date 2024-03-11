@@ -160,7 +160,7 @@ everything : inc $(PROD) htadm htimage cgiparse cgiutils
 PURIFY_CACHE = /home2/frystyk/purify-cache
 
 PURIFY = purify \
-	-logfile=$(HOME)/purify.log
+	-logfile=$(HOME)/purify.log \
 	-cache-dir=$(PURIFY_CACHE)
 
 #

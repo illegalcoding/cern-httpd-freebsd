@@ -117,8 +117,10 @@ extern int errno;
 #ifndef VMS
 #ifndef NeXT
 #ifndef THINK_C
+#ifndef __FreeBSD__
 extern char *sys_errlist[];		/* see man perror on cernvax */
 extern int sys_nerr;
+#endif
 #endif  /* think c */
 #endif	/* NeXT */
 #endif  /* VMS */
@@ -145,7 +147,11 @@ PUBLIC CONST char * HTErrnoString NOARGS
 #endif
 
 #ifndef ER_NO_TRANS_DONE
-    return (errno < sys_nerr ? sys_errlist[errno] : "Unknown error");
+#ifndef __FreeBSD__
+	return (errno < sys_nerr ? sys_errlist[errno] : "Unknown error");
+#else
+	return strerror(errno);
+#endif
 #endif
 
 #else /* VMS */

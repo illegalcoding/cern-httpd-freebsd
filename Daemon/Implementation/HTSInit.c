@@ -135,7 +135,7 @@ PUBLIC void HTFileInit NOARGS
     HTAddType(".JPE",    "image/jpeg",			"binary", 1.0);
     HTAddType(".jpe",    "image/jpeg",			"binary", 1.0);
     HTAddType(".JPEG",   "image/jpeg",			"binary", 1.0);
-    HTAddType(".jpeg",   "image/jpeg",			"binary", 1.0);
+    HTAddType(".jpeg",	 "image/jpeg",			"binary", 1.0);
     HTAddType(".tif",    "image/tiff",			"binary", 1.0);	/* TIFF			*/
     HTAddType(".tiff",   "image/tiff",			"binary", 1.0);
     HTAddType(".ras",    "image/cmu-raster",		"binary", 1.0);
@@ -148,9 +148,13 @@ PUBLIC void HTFileInit NOARGS
     HTAddType(".xbm",    "image/x-xbitmap",		"7bit",   1.0);	/* X bitmap		*/
     HTAddType(".xpm",    "image/x-xpixmap",		"binary", 1.0);	/* X pixmap format	*/
     HTAddType(".xwd",    "image/x-xwindowdump",		"binary", 1.0);	/* X window dump (xwd)	*/
+    HTAddType(".svg",    "image/svg+xml",		"binary", 1.0);	/* SVG	*/
     HTAddType(".html",   "text/html",			"8bit",   1.0);	/* HTML			*/
     HTAddType(".htm",    "text/html",			"8bit",   1.0);	/* HTML on PC's :-(	*/
     HTAddType(".htmls",	 "text/html",			"8bit",	  1.0);	/* Server-side includes	*/
+    HTAddType(".js",	 "text/javascript",		"8bit",   1.0);	/* JavaScript			*/
+    HTAddType(".json",	 "application/json",	"8bit",   1.0);	/* JSON			*/
+    HTAddType(".css",	 "text/css",			"8bit",   1.0);	/* CSS			*/
     HTAddType(".c",      "text/plain",			"7bit",   0.5);	/* C source		*/
     HTAddType(".h",      "text/plain",			"7bit",   0.5);	/* C headers		*/
     HTAddType(".C",      "text/plain",			"7bit",   0.5);	/* C++ source		*/

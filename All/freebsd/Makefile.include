@@ -5,7 +5,7 @@
 WWW_MACH = freebsd
 
 CFLAGS += -DDEBUG -D__BSD__
-LFLAGS =
+LFLAGS = -lssl -lcrypt
 
 # Directory for installed binary:
 BINDIR = /usr/local/bin

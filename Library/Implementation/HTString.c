@@ -61,8 +61,13 @@ PUBLIC int strncasecomp ARGS3(CONST char*,a, CONST char *,b, int,n)
 /*
  * strcasestr(s1,s2) -- like strstr(s1,s2) but case-insensitive.
  */
+#ifndef __FreeBSD__
 PUBLIC char * strcasestr ARGS2(char *,	s1,
 			       char *,	s2)
+#else 
+PUBLIC char * strcasestr ARGS2(const char *,	s1,
+			       const char *,	s2)
+#endif
 {
     char * try = s1;
 
